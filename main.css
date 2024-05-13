@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #ccc;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    padding: 16px 0;
+    background-color: black;
+    color: rgb(192, 185, 131);
+}
+
+header h1 {
+    font-size: 54px;
+    font-family: "DM Serif Text", serif;
+}
+
+header li {
+    list-style: none;
+}
+
+header li a {
+    text-decoration: none;
+    color:  rgb(192, 185, 131);
+    font-weight: bold;
+    margin-right: 30px;
+    font-size: 24px;
+}
+
+header nav ul {
+    display: flex;
+}
+
+.sobre {
+    display: flex;
+    padding: 36px;
+}
+
+.sobre h2 {
+    font-size: 28px;
+    border-bottom: 2px solid black;
+    margin-bottom: 20px;
+}
+
+.sobre h3 {
+    font-weight: lighter;
+}
+
+.sobre img {
+    margin-right: 20px;
+}
+
+.corpo {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.produto {
+    display: flex;
+    list-style: none;
+    grid-template-columns: repeat(4, 22%);
+    column-gap: 1%;
+}
+
+.produtos h2 {
+    margin: 40px 0;
+    font-size: 28px;
+    border-bottom: 2px solid black;
+}
+
+.produto img {
+    height: 320px;
+    margin-right: 8px;
+}
+
+.produto h3 {
+    padding: 8px 0;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    background-color:black;
+    color: #fff;
+    font-weight: bold;
+    max-width: 320px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color:  rgb(99, 89, 89);
+}
+
+.price {
+    margin: 16px 0;
+}
+
+.price del {
+    color: #605d5d;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 767px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header li a {
+        margin-right: 16px;
+        font-size: 12px;
+    }
+
+    .container {
+        width: 85%;
+    }
+
+    .container h2 {
+        font-size: 1.5em;
+    }
+
+    .container h3 {
+        font-size: 1em;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .sobre {
+        flex-direction: column;
+        padding: 36px 0;
+    }
+
+    .sobre img {
+        margin-bottom: 16px;
+        margin-right: 0;
+    }
+
+    .produto {
+        flex-direction: column;
+    }
+
+    .produto button {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .sobre {
+        display: block;
+    }
+
+    .sobre img {
+        width: 100%;
+        padding: 36px 0;
+    }
+
+    .produtos {
+        padding: 36px;
+        width: 100%;
+    }
+
+    .produto {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .coluna {
+        width: 49%;
+        margin-bottom: 26px;
+    }
+}
+
+@media (orientation: landscape) {
+    .container {
+        max-width: 1330px;
+    }
+
+    .produto {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .coluna {
+        width: auto;
+        flex-grow: 1;
+        margin-bottom: 0;
+    }
+}
